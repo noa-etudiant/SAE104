@@ -14,4 +14,11 @@ final class PortfolioController extends AbstractController{
             'controller_name' => 'PortfolioController',
         ]);
     }
+    #[Route('/passion', name: 'app_passion')]
+    public function passion(): Response
+    {
+        return $this->render('portfolio/passion.html.twig', [
+            'controller_name' => 'PortfolioController',
+        ]);
+    }
 }
