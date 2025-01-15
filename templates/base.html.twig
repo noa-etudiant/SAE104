@@ -13,6 +13,14 @@
               font-style: normal;
           }
 
+          body, html {
+              margin: 0;
+              padding: 0;
+              height: 100%; /* Prend toute la hauteur */
+              display: flex;
+              flex-direction: column; /* Positionne les éléments en colonne */
+          }
+
           body {
               font-family: 'futura', Arial, sans-serif;
           }
@@ -33,7 +41,7 @@
               border-radius: 10px; /* Bordures arrondies */
               box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet 3D */
               max-width: 80%; /* Limite la largeur à 80% de l'écran */
-              margin: 20px auto; /* Centre le bloc avec un espacement autour */
+              margin: 50px auto 20px auto; /* 50px de marge en haut pour déplacer le rectangle plus bas */
           }
 
           h1 {
@@ -64,14 +72,43 @@
               border-radius: 5px;
               transition: background-color 0.3s ease;
               text-decoration: none; /* Enlève le surlignement du texte */
+              margin-top: 20px; /* Décale le bouton un peu plus bas */
           }
 
           .btn-custom:hover {
               background-color: #0056b3;
               cursor: pointer;
           }
+
+          .footer {
+              background-color: #333;
+              color: white;
+              text-align: center;
+              padding: 20px;
+              position: relative;
+              bottom: 0;
+              width: 100%;
+              margin-top: auto;
+          }
+
+          .footer a {
+              color: #fff;
+              text-decoration: none;
+          }
+
+          .footer a:hover {
+              text-decoration: underline;
+          }
+
+          .container {
+              flex-grow: 1; /* Cette propriété fait en sorte que le contenu prenne tout l'espace restant */
+              display: flex;
+              flex-direction: column;
+              justify-content: center; /* Centrage vertical du contenu */
+              align-items: center; /* Centrage horizontal du contenu */
+          }
         </style>
-        
+
         {% block stylesheets %}
         {% endblock %}
 
@@ -120,7 +157,13 @@
         </div>
         
         <!-- Bouton d'orientation vers une autre page en dessous du rectangle -->
-        <a href="/passion" class="btn-custom mt-4">En savoir plus</a>
+        <a href="/passion" class="btn-custom">En savoir plus</a>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <p>&copy; 2025 Tavernier Noa - Tous droits réservés.</p>
+            <p>Mentions Légales</p>
+        </div>
     </div>
   </body>
 </html>
