@@ -21,4 +21,18 @@ final class PortfolioController extends AbstractController{
             'controller_name' => 'PortfolioController',
         ]);
     }
+    #[Route('/cv', name: 'app_cv')]
+    public function cv(): Response
+    {
+        return $this->render('portfolio/cv.html.twig', [
+            'controller_name' => 'PortfolioController',
+        ]);
+    }
+    #[Route('/formulaire', name: 'app_formulaire')]
+    public function formulaire(): Response
+    {
+        return $this->render('portfolio/formulaire.html.twig', [
+            'controller_name' => 'PortfolioController',
+        ]);
+    }
 }

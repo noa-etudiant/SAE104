@@ -1,0 +1,181 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Eportfolio{% endblock %}
+
+{% block body %}
+
+<div class="container text-center">
+    <h1 class="mt-4">Mon CV</h1>
+
+<div class="content-box">
+        <h2>PENTESTER</h2>
+        <p><strong>Tavernier Noa - Étudiant en Réseaux et Télécommunications</strong></p>
+        <p><strong>Adresse:</strong> 3 place Gauguin, 42300 Roanne</p>
+        <p><strong>Téléphone:</strong> 06 95 45 34 37</p>
+        <p><strong>Email:</strong> noa.tavernier@etu.univ-st-etienne.fr</p>
+
+        <div class="section">
+            <h2>Objectifs</h2>
+            <p>Je suis à la recherche d’une alternance.</p>
+        </div>
+
+        <div class="section">
+            <h2>Expériences professionnelles</h2>
+            <ul>
+                <li class="list-item"><strong>Chantiers éducatifs – MAIRIE, Saint Romain le Puy</strong> (Juil 2023 – Juil 2023)
+                    <br>Chantiers éducatifs au service technique de la mairie de Saint Romain le Puy.</li>
+                <li class="list-item"><strong>Job d’été – Ô PLATEAU DES SAVEURS, Sury le Comtal</strong> (Juil 2021 – Août 2021 et Juil 2022 – Août 2022)
+                    <br>Conditionner des produits alimentaires et aider le cuisinier dans ses missions.</li>
+                <li class="list-item"><strong>Stage de troisième - SERIFLOCK, Montbrison</strong> (Avr 2021 – Avr 2021)
+                    <br>Contrôler l’impression des autocollants pour la devanture d’une entreprise et faire le collage, puis réaliser de la sérigraphie sur vêtements.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Diplômes</h2>
+            <ul>
+                <li class="list-item"><strong>BAC STI2D sin (avec mention assez bien)</strong> – Lycée de Beauregard, Montbrison (Juin 2024)</li>
+                <li class="list-item"><strong>Brevet des collèges (avec mention assez bien)</strong> – Collège Léonard de Vinci, Saint Romain le Puy (Juin 2021)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Permis</h2>
+            <ul>
+                <li class="list-item">Permis cyclomoteur - catégorie AM</li>
+                <li class="list-item">Permis B (véhiculé)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projets / Certifications</h2>
+            <ul>
+                <li class="list-item">Certification Pix</li>
+                <li class="list-item">Certification SecNumAcademy</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Compétences</h2>
+            <ul>
+                <li class="list-item">Électronique</li>
+                <li class="list-item">Programmation</li>
+                <li class="list-item">Informatique</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Qualités</h2>
+            <ul>
+                <li class="list-item">Esprit d’équipe</li>
+                <li class="list-item">Autonome</li>
+                <li class="list-item">Discret</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Langues</h2>
+            <ul>
+                <li class="list-item">Français</li>
+                <li class="list-item">Anglais</li>
+                <li class="list-item">Italien</li>
+            </ul>
+        </div>
+
+</div>
+
+<div class="button-wrapper">
+    <a href="/formulaire" class="btn-custom">Télécharger le CV</a>
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Tavernier Noa - Tous droits réservés.</p>
+    <p>Mentions Légales</p>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body, html {
+            height: 100%; /* S'assure que la page occupe toute la hauteur */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            color:rgb(99, 99, 99);
+        }
+
+         }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Enlève le surlignement du texte */
+            display: inline-block;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+            cursor: pointer;
+        }
+
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.7); /* Fond blanc avec opacité de 70% */
+            padding: 20px;
+            border-radius: 10px; /* Bordures arrondies */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet 3D */
+            max-width: 80%; /* Limite la largeur à 80% de l'écran */
+            margin: 50px auto; /* Espacement vertical autour des blocs */
+            text-align: center; /* Centrage du contenu */
+        }
+
+        h1 {
+            font-size: 5vw; /* Taille de la police responsive */
+            margin-top: 2rem;
+            color: #fff; /* Texte en blanc */
+            opacity: 0.9; /* Légèrement transparent */
+        }
+
+        h2 {
+            color: #007bff;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .list-item {
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%; /* S'étend sur toute la largeur */
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+{% endblock %}

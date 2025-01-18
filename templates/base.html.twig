@@ -15,12 +15,21 @@
                 font-style: normal;
             }
   
+            .background-video {
+                position: fixed; /* Fixe la vidéo en arrière-plan */
+                top: 0;
+                left: 0;
+                width: 100%; /* Largeur complète */
+                height: 100%; /* Hauteur complète */
+                object-fit: cover; /* Garde les proportions tout en remplissant l'écran */
+                z-index: -1; /* Place la vidéo derrière le contenu */
+            }
+
             body, html {
                 margin: 0;
                 padding: 0;
-                height: 100%; /* Prend toute la hauteur */
-                display: flex;
-                flex-direction: column; /* Positionne les éléments en colonne */
+                height: 100%; /* Prend toute la hauteur disponible */
+                overflow-x: hidden; /* Empêche le défilement horizontal */
             }
   
             body {
@@ -68,7 +77,10 @@
                 <div class="collapse navbar-collapse" id="navbarColor02">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/passion">Passion</a>
+                            <a class="nav-link" href="/passion">Passions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cv">CV</a>
                         </li>
                     </ul>
                 </div>
