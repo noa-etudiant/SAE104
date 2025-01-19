@@ -7,7 +7,6 @@
     <div class="container text-center">
         <h1 class="mt-4">Formulaire</h1>
 
-        <!-- Nouveau bloc de texte avec fond transparent -->
         <div class="content-box">
             <form method="POST" action="/submit">
             <div class="form-group">
@@ -22,12 +21,11 @@
                 <label for="message">Message (facultatif) :</label>
                 <textarea id="message" name="message" class="form-control" placeholder="Ajoutez un message..."></textarea>
             </div>
-                <a href="/PDF/CV Tavernier Noa.pdf" class="btn btn-primary" id="download-button" download disabled>Télécharger le CV</a>
+                <a href="/PDF/CV.pdf" class="btn btn-primary" id="download-button" download disabled>Télécharger le CV</a>
                 </form>
         </div>
 
 
-    <!-- Pied de page -->
     <footer class="footer">
         <p>&copy; 2025 Tavernier Noa - Tous droits réservés.</p>
         <p>Mentions Légales</p>
@@ -41,26 +39,25 @@
         const emailField = document.getElementById('email');
         const downloadButton = document.getElementById('download-button');
 
-        // Fonction pour vérifier si les champs sont remplis
         function checkForm() {
             const nameValue = nameField.value.trim();
             const emailValue = emailField.value.trim();
 
             if (nameValue !== '' && emailValue !== '') {
-                downloadButton.removeAttribute('disabled'); // Active le bouton
+                downloadButton.removeAttribute('disabled');
             } else {
-                downloadButton.setAttribute('disabled', 'disabled'); // Désactive le bouton
+                downloadButton.setAttribute('disabled', 'disabled');
             }
         }
 
-        // Ajoute un écouteur d'événement sur les champs pour vérifier les changements
+
         nameField.addEventListener('input', checkForm);
         emailField.addEventListener('input', checkForm);
 
-        // Empêche le téléchargement si le bouton est désactivé
+
         downloadButton.addEventListener('click', function (e) {
             if (downloadButton.hasAttribute('disabled')) {
-                e.preventDefault(); // Empêche l'action par défaut
+                e.preventDefault();
                 alert('Veuillez remplir tous les champs obligatoires avant de télécharger le CV.');
             }
         });
@@ -71,51 +68,51 @@
 
 {% block stylesheets %}
     <style>
-        /* Le conteneur principal occupe toute la hauteur de l'écran */
+
         .page-container {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* 100% de la hauteur de la fenêtre */
+            min-height: 100vh;
         }
 
         .container {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Aligne le contenu en haut du conteneur */
+            justify-content: flex-start;
             align-items: center;
-            padding-top: 2rem; /* Ajoute un peu d'espace en haut si nécessaire */
+            padding-top: 2rem;
         }
         .content-box {
-            background-color: rgba(255, 255, 255, 0.7); /* Fond blanc avec opacité de 70% */
+            background-color: rgba(255, 255, 255, 0.7);
             padding: 20px;
-            border-radius: 10px; /* Bordures arrondies */
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet 3D */
-            max-width: 80%; /* Limite la largeur à 80% de l'écran */
-            margin: 50px auto 20px auto; /* 50px de marge en haut pour déplacer le rectangle plus bas */
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+            margin: 50px auto 20px auto;
         }
 
         h1 {
-            font-size: 5vw; /* Taille de la police responsive */
+            font-size: 5vw;
             margin: 0;
-            color: #fff; /* Texte en blanc */
-            opacity: 0.9; /* Légèrement transparent */
+            color: #fff;
+            opacity: 0.9;
         }
 
         .titre-box {
-            color: #333; /* Texte foncé pour le contraste */
-            line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+            color: #333;
+            line-height: 1.6;
             font-size: 2rem;
         }
 
         .text-box {
-            color: #333; /* Texte foncé pour le contraste */
-            line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+            color: #333;
+            line-height: 1.6;
             font-size: 1.2rem;
         }
 
         a {
-            margin-top: 20px; /* Ajoute une marge au-dessus du bouton */
+            margin-top: 20px;
         }
 
 
@@ -124,7 +121,7 @@
             color: white;
             text-align: center;
             padding: 20px;
-            width: 100%; /* S'étend sur toute la largeur */
+            width: 100%;
             margin-top: auto;
         }
 

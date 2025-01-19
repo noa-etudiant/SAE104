@@ -35,4 +35,11 @@ final class PortfolioController extends AbstractController{
             'controller_name' => 'PortfolioController',
         ]);
     }
+    #[Route('/eportfolio', name: 'app_eportfolio')]
+    public function eportfolio(): Response
+    {
+        return $this->render('portfolio/eportfolio.html.twig', [
+            'controller_name' => 'PortfolioController',
+        ]);
+    }
 }

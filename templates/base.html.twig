@@ -1,5 +1,3 @@
-<!-- base.html.twig -->
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,20 +14,20 @@
             }
   
             .background-video {
-                position: fixed; /* Fixe la vidéo en arrière-plan */
+                position: fixed;
                 top: 0;
                 left: 0;
-                width: 100%; /* Largeur complète */
-                height: 100%; /* Hauteur complète */
-                object-fit: cover; /* Garde les proportions tout en remplissant l'écran */
-                z-index: -1; /* Place la vidéo derrière le contenu */
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
             }
 
             body, html {
                 margin: 0;
                 padding: 0;
-                height: 100%; /* Prend toute la hauteur disponible */
-                overflow-x: hidden; /* Empêche le défilement horizontal */
+                height: 100%;
+                overflow-x: hidden;
             }
   
             body {
@@ -42,16 +40,16 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                object-fit: cover; /* Couvre tout l'écran sans déformation */
-                z-index: -1; /* Place la vidéo derrière tout le contenu */
+                object-fit: cover;
+                z-index: -1;
             }
   
             .container {
-                flex-grow: 1; /* Cette propriété fait en sorte que le contenu prenne tout l'espace restant */
+                flex-grow: 1;
                 display: flex;
                 flex-direction: column;
-                justify-content: center; /* Centrage vertical du contenu */
-                align-items: center; /* Centrage horizontal du contenu */
+                justify-content: center;
+                align-items: center;
             }
         </style>
         {% block stylesheets %}
@@ -81,6 +79,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/cv">CV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eportfolio">E-Portfolio</a>
                         </li>
                     </ul>
                 </div>
